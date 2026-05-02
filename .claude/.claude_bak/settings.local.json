@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/91636/OneDrive/Desktop/shadab/projects/my portfolio website/WebPortfolio/**)",
+      "Read(//c/Users/91636/OneDrive/Desktop/shadab/projects/my portfolio website/my_portfolio/app/**)",
+      "Bash(grep -E \"\\\\.\\(tsx?|jsx?\\)$\")",
+      "Read(//c/Users/91636/OneDrive/Desktop/shadab/projects/my portfolio website/my_portfolio/**)",
+      "Bash(npm --version)",
+      "Bash(npm info *)",
+      "Bash(python -c ' *)",
+      "Bash(mv .claude .claude_bak)",
+      "Bash(npx create-next-app@14.2.35 . --typescript --tailwind --eslint --app --src-dir=false --import-alias=\"@/*\" --no-git)"
+    ]
+  }
+}
