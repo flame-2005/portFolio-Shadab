@@ -26,7 +26,8 @@ const PROJECTS = [
     desc: 'End-to-end AI-driven investment research platform. Tracks 150+ sources (blogs, research firms, YouTube), applies AI filtering to remove noise, and surfaces high-quality trading insights. Owned full frontend, backend architecture, data pipelines, and AI processing workflows.',
     tech: ['Next.js', 'TypeScript', 'Convex', 'Supabase', 'OpenAI', 'Gemini', 'Tailwind'],
     live: 'https://thevantedge.com',
-    github: '#',
+    liveLabel: 'Live',
+    github: null,
   },
   {
     num: '// 02',
@@ -41,7 +42,8 @@ const PROJECTS = [
     desc: 'Built the ChangePay website (changepay.in) completely from scratch as lead web developer. End-to-end ownership — Figma UI/UX design, full frontend and backend development — for a fintech platform at a $20M+ valued company.',
     tech: ['Next.js', 'Node.js', 'MongoDB', 'Figma', 'Tailwind CSS', 'Razorpay'],
     live: 'https://changepay.in',
-    github: '#',
+    liveLabel: 'Live',
+    github: null,
   },
   {
     num: '// 03',
@@ -55,8 +57,9 @@ const PROJECTS = [
     ],
     desc: 'AI-powered career assistant — WebApp + Chrome Extension. Smart resume building, AI form auto-fill, RAG-powered job chat. Cut average application time from 45 min to under 5 min. 1.2K+ active monthly users.',
     tech: ['Next.js', 'Convex', 'Supabase', 'Pinecone', 'Gemini AI', 'Tailwind'],
-    live: '#',
-    github: '#',
+    live: null,
+    liveLabel: 'Live',
+    github: 'https://github.com/flame-2005/jobGenie---AI-chat-Assistant',
   },
   {
     num: '// 04',
@@ -70,8 +73,9 @@ const PROJECTS = [
     ],
     desc: 'Campus radio + social platform built for student voices across India. Region-based content, audio posts with images, creator follow system, talent competitions powered by engagement, and map-based creator discovery.',
     tech: ['Next.js', 'React Native', 'MongoDB', 'Node.js', 'Tailwind', 'Cloudinary'],
-    live: '#',
-    github: '#',
+    live: null,
+    liveLabel: 'Live',
+    github: 'https://github.com/flame-2005/YuvaVaani',
   },
   {
     num: '// 05',
@@ -85,8 +89,9 @@ const PROJECTS = [
     ],
     desc: 'Platform connecting blue-collar workers with users — built to create economic opportunity for underserved communities. Worker signup system, category-based service discovery, MongoDB backend, and React + Tailwind frontend.',
     tech: ['React', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS'],
-    live: '#',
-    github: '#',
+    live: null,
+    liveLabel: 'Live',
+    github: 'https://github.com/flame-2005/EzyHelp',
   },
   {
     num: '// 06',
@@ -100,8 +105,9 @@ const PROJECTS = [
     ],
     desc: 'React Native mobile app for a comic + creator content platform targeting 100K+ users. Scrollable content feed, video playback, image zoom, social actions (like/bookmark/share), creator uploads, and Supabase Auth — all shipped with a 50% performance improvement.',
     tech: ['React Native', 'TypeScript', 'Expo', 'Supabase', 'Convex', 'MongoDB'],
-    live: '#',
-    github: '#',
+    live: 'https://play.google.com/store/apps/details?id=co.fanon&pcampaignid=web_share',
+    liveLabel: 'Play Store',
+    github: null,
   },
 ]
 
@@ -140,14 +146,16 @@ export default function ProjectsSection() {
                 {p.tech.map(t => <span key={t} className="tech-tag">{t}</span>)}
               </div>
               <div className="project-links">
-                {p.live !== '#' && (
+                {p.live && (
                   <a href={p.live} target="_blank" rel="noreferrer" className="project-link">
-                    {LINK_ICON} Live
+                    {LINK_ICON} {p.liveLabel}
                   </a>
                 )}
-                <a href={p.github} className="project-link">
-                  {GH_ICON} GitHub
-                </a>
+                {p.github && (
+                  <a href={p.github} target="_blank" rel="noreferrer" className="project-link">
+                    {GH_ICON} GitHub
+                  </a>
+                )}
               </div>
             </div>
           ))}
