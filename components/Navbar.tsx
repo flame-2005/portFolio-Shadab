@@ -71,7 +71,7 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
-      <a href="#contact" className="nav-cta" onClick={(e) => onNavClick(e, 'contact')}>Hire Me</a>
+      <a href="#contact" className="nav-cta" onClick={(e) => onNavClick(e, 'contact')}>Get in Touch</a>
     </nav>
   )
 }
