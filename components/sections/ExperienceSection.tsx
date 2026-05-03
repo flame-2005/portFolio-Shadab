@@ -16,7 +16,7 @@ const EXPERIENCE = [
   },
   {
     date: 'Feb 2025 — Jul 2025',
-    role: 'React Native Developer',
+    role: 'Full Stack Developer Intern',
     company: 'Fanon',
     sub: 'fanon.co · Creator Content Platform · Target 100K+ users',
     dotColor: 'var(--cyan)',

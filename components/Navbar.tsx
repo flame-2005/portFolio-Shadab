@@ -4,8 +4,28 @@ import { useEffect } from 'react'
 
 const NAV_SECTIONS = ['about', 'skills', 'projects', 'experience', 'testimonials', 'contact']
 
+function ease(t: number) {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+}
+
 function smoothScrollTo(id: string) {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const el = document.getElementById(id)
+  if (!el) return
+  const targetY = el.getBoundingClientRect().top + window.scrollY - 72
+  const startY = window.scrollY
+  const distance = targetY - startY
+  const duration = 900
+  let startTime = 0
+
+  function step(ts: number) {
+    if (!startTime) startTime = ts
+    const elapsed = ts - startTime
+    const progress = Math.min(elapsed / duration, 1)
+    window.scrollTo(0, startY + distance * ease(progress))
+    if (progress < 1) requestAnimationFrame(step)
+  }
+
+  requestAnimationFrame(step)
 }
 
 function onNavClick(e: React.MouseEvent, id: string) {

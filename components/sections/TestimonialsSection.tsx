@@ -12,7 +12,7 @@ const TESTIMONIALS = [
     role: 'Product Lead · ChangePay (changepay.in)',
   },
   {
-    text: "Shadab joined Fanon as a React Native developer and immediately had an outsized impact. He revamped our content feed, video playback, and social interaction layer — boosting overall app performance by 50%. He ships fast and takes quality personally, which is rare at any experience level.",
+    text: "Shadab joined Fanon as a Full Stack Developer Intern and immediately had an outsized impact. He revamped our content feed, video playback, and social interaction layer — boosting overall app performance by 50%. He ships fast and takes quality personally, which is rare at any experience level.",
     avatar: 'F',
     name: 'Fanon Engineering',
     role: 'CTO · Fanon.co',

@@ -65,13 +65,13 @@ export default function ContactSection() {
                 <div className="contact-link-icon">{LI_ICON}</div>
                 linkedin.com/in/mohammed-shadab-alam
               </a>
-              <a href={`mailto:alamshadab9876543210@gmail.com`} className="contact-link-item">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alamshadab9876543210@gmail.com" target="_blank" rel="noreferrer" className="contact-link-item">
                 <div className="contact-link-icon">{MAIL_ICON}</div>
                 Drop me an email
               </a>
-              <a href="https://github.com/shadabalam5678" target="_blank" rel="noreferrer" className="contact-link-item">
+              <a href="https://github.com/flame-2005" target="_blank" rel="noreferrer" className="contact-link-item">
                 <div className="contact-link-icon">{GH_ICON}</div>
-                github.com/shadabalam5678
+                github.com/flame-2005
               </a>
             </div>
           </div>

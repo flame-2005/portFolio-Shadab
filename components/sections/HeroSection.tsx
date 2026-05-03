@@ -71,6 +71,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
+      <div className="neon-divider hero-divider" />
     </section>
   )
 }

@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic'
 import Navbar from '@/components/Navbar'
 import CanvasEffects from '@/components/CanvasEffects'
 import HeroSection from '@/components/sections/HeroSection'
+import EyeSection from '@/components/sections/EyeSection'
 import AboutSection from '@/components/sections/AboutSection'
 import SkillsSection from '@/components/sections/SkillsSection'
 import ProjectsSection from '@/components/sections/ProjectsSection'
@@ -41,6 +42,7 @@ export default function Home() {
 
       <main>
         <HeroSection />
+        {/* <EyeSection /> */}
         <div className="neon-divider" />
         <AboutSection />
         <div className="neon-divider" />

@@ -12,23 +12,28 @@ const onHoverLeave = () => { _cursor?.classList.remove('hovering') }
 
 export default function CanvasEffects() {
   useEffect(() => {
-    _cursor = document.getElementById('cursor')
+    const isTouchDevice = !window.matchMedia('(pointer: fine)').matches
+
     let mx = 0, my = 0
-
     const onMouseMove = (e: MouseEvent) => { mx = e.clientX; my = e.clientY }
-    document.addEventListener('mousemove', onMouseMove)
 
-    let cursorRaf: number
-    const animCursor = () => {
-      if (_cursor) { _cursor.style.left = mx + 'px'; _cursor.style.top = my + 'px' }
+    let cursorRaf: number = 0
+    if (!isTouchDevice) {
+      _cursor = document.getElementById('cursor')
+
+      document.addEventListener('mousemove', onMouseMove)
+
+      const animCursor = () => {
+        if (_cursor) { _cursor.style.left = mx + 'px'; _cursor.style.top = my + 'px' }
+        cursorRaf = requestAnimationFrame(animCursor)
+      }
       cursorRaf = requestAnimationFrame(animCursor)
-    }
-    cursorRaf = requestAnimationFrame(animCursor)
 
-    document.querySelectorAll('a, button, .project-card, .skill-chip, .tag').forEach(el => {
-      el.addEventListener('mouseenter', onHoverEnter)
-      el.addEventListener('mouseleave', onHoverLeave)
-    })
+      document.querySelectorAll('a, button, .project-card, .skill-chip, .tag').forEach(el => {
+        el.addEventListener('mouseenter', onHoverEnter)
+        el.addEventListener('mouseleave', onHoverLeave)
+      })
+    }
 
     // ── SPARK TRAIL ──────────────────────────────────────────────────────
     const sparkCanvas = document.createElement('canvas')
