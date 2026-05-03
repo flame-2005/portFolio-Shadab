@@ -51,7 +51,7 @@ export default function EyeSection() {
 
   return (
     <section id="eye-track">
-      <span className="eye-track-label">// TRACKING.ACTIVE</span>
+      <span className="eye-track-label">&#47;&#47; TRACKING.ACTIVE</span>
 
       <div className="eye-scene" ref={sceneRef}>
         <button className="eye-click-btn" onClick={handleClick} aria-label="Blink eye" />
